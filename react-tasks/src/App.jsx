@@ -4,10 +4,10 @@ import AddTask from './components/AddTask'
 function App() {
 
   return (
-    <>
+    <div className='lg:flex flex-col w-full lg:flex-row '>
       <AddTask />
       <AllTask />
-    </>
+    </div>
   )
 }
 

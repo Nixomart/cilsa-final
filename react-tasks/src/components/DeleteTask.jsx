@@ -17,12 +17,11 @@ export default function DeleteTask({task}) {
   }
   return (
     <>
-     <Button onClick={handleOpen}  color="red" variant="gradient">
+     <Button onClick={handleOpen}  color="red" variant="gradient" className=" px-3 py-2">
         Borrar tarea
       </Button>
       <Dialog open={open} handler={handleOpen}>
         <form onSubmit={handleSubmit}>
-
         <DialogHeader>borrar tarea: {task.name} ? </DialogHeader>
         <DialogBody>
         <h5 className="mb-2 text-slate-800 text-xl font-semibold">
@@ -40,12 +39,12 @@ export default function DeleteTask({task}) {
             onClick={handleOpen}
             className="mr-1"
           >
-            <span>Cancel</span>
+            <span>Cancelar</span>
           </Button>
           <Button
           type="submit"
           variant="gradient" color="green" onClick={handleOpen}>
-            <span>Confirm</span>
+            <span>Confirmar</span>
           </Button>
         </DialogFooter>
         </form>

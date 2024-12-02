@@ -24,7 +24,7 @@ export default function UpdateTask({ task }) {
   const handleOpen = () => setOpen(!open);
   return (
     <>
-      <Button onClick={handleOpen} color="green" variant="gradient">
+      <Button onClick={handleOpen} color="green" variant="gradient" className=" px-3 py-2">
         EDITAR TAREA
       </Button>
       <Dialog open={open} handler={handleOpen}>
@@ -46,7 +46,7 @@ export default function UpdateTask({ task }) {
               >
                 <option value="pendiente">Pendiente</option>
                 <option value="terminado">Terminado</option>
-                <option value="asignado">Asignado</option>
+                {/* <option value="asignado">Asignado</option> */}
               </select>
             </div>
           </DialogBody>
@@ -57,7 +57,7 @@ export default function UpdateTask({ task }) {
               onClick={handleOpen}
               className="mr-1"
             >
-              <span>Cancel</span>
+              <span>Cancelar</span>
             </Button>
             <Button
               type="submit"
@@ -65,7 +65,7 @@ export default function UpdateTask({ task }) {
               color="green"
               onClick={handleOpen}
             >
-              <span>Confirm</span>
+              <span>Confirmar</span>
             </Button>
           </DialogFooter>
         </form>
