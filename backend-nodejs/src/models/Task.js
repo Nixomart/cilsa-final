@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../db/db.js";
+import { User } from "./User.js";
 
 export const Task = sequelize.define(
   "task",
@@ -19,8 +20,16 @@ export const Task = sequelize.define(
       type: DataTypes.STRING,
       defaultValue: "asignado",
     },
+    user_id:{
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+    }
   },
   {
     timestamps: false,
   }
 );
+Task.hasOne(User, {foreignKey: 'user_id', sourceKey: 'id'});
